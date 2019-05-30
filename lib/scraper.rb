@@ -28,9 +28,6 @@ class Scraper
         course.description = post.css("p").text
       end
   end
-      
-      
-  end
   
   def get_courses
 	  get_page.css(".post")
