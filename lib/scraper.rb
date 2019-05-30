@@ -22,7 +22,7 @@ class Scraper
       # doc = open("http://learn-co-curriculum.github.io/site-for-scraping/courses")
     #nokogiri call using doc variable 
       # doc = Nokogiri::HTML(doc)
-    #or combine the two like below.....which is better bc assign variable onlyh once
+    #combined
       doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
   end
   
