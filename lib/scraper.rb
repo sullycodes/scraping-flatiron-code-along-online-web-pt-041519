@@ -36,7 +36,7 @@ class Scraper
 	end
 	
 	def test 
-	 get_page.css(".post").first
+	 get_page.css(".post").first.css("h2")
 	end
   
 end
