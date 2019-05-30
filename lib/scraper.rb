@@ -42,4 +42,5 @@ class Scraper
 end
 
 
-a =Scraper.new.test
+a = Scraper.new.test
+puts a
