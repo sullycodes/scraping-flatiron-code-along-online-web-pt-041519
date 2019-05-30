@@ -1,11 +1,12 @@
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 require_relative './course.rb'
 
 class Scraper
   
-    def print_courses
+  def print_courses
     self.make_courses
     Course.all.each do |course|
       if course.title
@@ -16,7 +17,28 @@ class Scraper
     end
   end
   
+  def get_page 
+    #open-uri call
+      # doc = open("http://learn-co-curriculum.github.io/site-for-scraping/courses")
+    #nokogiri call using doc variable 
+      # doc = Nokogiri::HTML(doc)
+    #or combine the two like below.....which is better bc assign variable onlyh once
+      doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
+  
+  # binding.pry
+  end
+  
+  def get_courses
+	  get_page.css(".post").first.css("h2")
+	end
+	
+	# I need to iterate through get_courses
+	def make_courses
+		get_courses
+	end
+	
+  
 end
 
 
-
+Scraper.new.get_page
