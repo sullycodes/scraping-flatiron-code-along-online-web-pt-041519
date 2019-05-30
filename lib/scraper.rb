@@ -38,6 +38,7 @@ class Scraper
 	def test 
 	 a = get_page.css(".post").first.css("h2").text
 	 b = get_page.css(".post").first.css("date").text
+	 puts a, b
 
 	end
   
