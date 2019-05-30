@@ -24,8 +24,6 @@ class Scraper
       # doc = Nokogiri::HTML(doc)
     #or combine the two like below.....which is better bc assign variable onlyh once
       doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
-  
-  # binding.pry
   end
   
   def get_courses
@@ -34,11 +32,14 @@ class Scraper
 	
 	# I need to iterate through get_courses
 	def make_courses
-		get_courses.each do |
+		# get_courses.each do |
 	end
 	
+	def test 
+	 get_page.c.css(".post").first
+	end
   
 end
 
 
-Scraper.new.get_page
+Scraper.new.test
