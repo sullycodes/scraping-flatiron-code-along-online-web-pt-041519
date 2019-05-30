@@ -34,7 +34,7 @@ class Scraper
 	
 	# I need to iterate through get_courses
 	def make_courses
-		get_courses
+		get_courses.each do |
 	end
 	
   
