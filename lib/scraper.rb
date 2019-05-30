@@ -18,11 +18,7 @@ class Scraper
   end
   
   def get_page 
-    #open-uri call
-      # doc = open("http://learn-co-curriculum.github.io/site-for-scraping/courses")
-    #nokogiri call using doc variable 
-      # doc = Nokogiri::HTML(doc)
-    #combined
+    #combined open-uri & nokigiri calls
       doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
       
       doc.css(".post").each do |post|
