@@ -39,9 +39,8 @@ class Scraper
 	 a = get_page.css(".post").first.css("h2").text
 	 b = get_page.css(".post").first.css(".date").text
 	 c = get_page.css(".post").first.css("p").text
-	 puts a
-	 puts b
-    puts c
+	 d = get_page.css(".post")
+	 puts d
 	end
   
 end
